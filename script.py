@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from flask import request
+from datetime import datetime
 import csv
 
 app = Flask(__name__)
@@ -49,8 +50,9 @@ def addReview():
 
     name = request.form[('name')]
     comment = request.form[('comment')]
+    date = datetime.now().strftime('%d-%m-%Y')
 
-    newReview = [name, comment]
+    newReview = [name, comment, date]
     reviewList.append(newReview)
 
     writeFile(reviewList, reviewFile)
