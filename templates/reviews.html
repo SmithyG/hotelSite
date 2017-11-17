@@ -11,21 +11,35 @@
     <a href ="bookings">Bookings</a>
     <a href ="attractions">Local Attractions</a>
 
+    <h2>Leave A Review!</h2>
+    <p>We hope you had a nice stay at Hawkins Guest House! Please leave any comments about the quality of your stay below!</p>
+
     <form action ="addReview" method="post">
+        Name:<br>
         <input type="text" name="name">
+        <br>
+        Comment:<br>
         <input type="text" name="comment">
-        <input type="submit" value="add to File">
+        <br><br>
+        <input type="submit" value="Post">
     </form>
 
+    <h3>Guest Reviews</h3>
+
     <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Comment</th>
+            <th>Date</th>
+        </tr>
     {% for line in reviewList %}
-    <tr>
+     <tr>
         {% for item in line%}
         <td>
         {{item}}
         </td>
         {% endfor %}
-    </tr>
+        </tr>
     {% endfor %}
     </table>
 
