@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('exampleHome.html')
+    return render_template('home.html')
 
 
 @app.route('/attractions')
@@ -90,7 +90,7 @@ def addBooking():
 
 @app.route('/exitForm', methods=['GET'])
 def exitForm():
-    return render_template('exampleHome.html')
+    return render_template('home.html')
 
 
 if __name__ == '__main__':
