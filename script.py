@@ -19,7 +19,7 @@ def attractions():
 def bookings():
     with open('static\\bookings.csv', 'r') as inFile:
         reader = csv.reader(inFile)
-        bookingList = [row for row in reader if '1' in row]
+        bookingList = [row for row in reader if 'George' in row]
     return render_template('bookings.html', bookingList=bookingList)
 
 
@@ -85,7 +85,7 @@ def addBooking():
 
     writeFile(bookingList, bookingFile)
 
-    return render_template('bookings.html', bookingList=bookingList)
+    return render_template('home.html')
 
 
 @app.route('/exitForm', methods=['GET'])
