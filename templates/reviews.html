@@ -3,14 +3,21 @@
 <head>
     <meta http-equiv="Content-type" content="text/html;charset=utf-8" />
     <title>International Heights Hotel</title>
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="/static/style.css">
 </head>
 <body>
 <h1>Reviews</h1>
 
-<a href ="/">Home</a>
-<a href ="bookings">Bookings</a>
-<a href ="attractions">Local Attractions</a>
+<nav>
+    <ul>
+        <li><a href="/">Home</a> </li>
+        <li><a href ="attractions">Local Attractions</a></li>
+        <li><a href ="bookings">Bookings</a></li>
+        <li><a class="active" href ="reviews">Reviews</a></li>
+    </ul>
+</nav>
 
 <div class="reviewForm">
     <h2>Leave A Review!</h2>
@@ -25,31 +32,30 @@
         <input type="submit" value="Post">
     </form>
 
-
     <form action = "exitForm" method = "get">
-        <input type = "submit" value = "Exit" >
+        <input type = "submit" value = "Exit">
     </form>
 </div>
 
 <div class = "guestReviews">
-<h3>Guest Reviews</h3>
+    <h3>Guest Reviews</h3>
 
-<table id = "reviewTable" border="1">
-    <tr>
-        <th>Name</th>
-        <th>Comment</th>
-        <th>Date</th>
-    </tr>
-    {% for line in reviewList %}
+    <table id = "reviewTable" border="1">
         <tr>
-            {% for item in line%}
-                <td>
-                    {{item}}
-                </td>
-            {% endfor %}
+            <th>Name</th>
+            <th>Comment</th>
+            <th>Date</th>
         </tr>
-    {% endfor %}
-</table>
+        {% for line in reviewList %}
+            <tr>
+                {% for item in line%}
+                    <td>
+                        {{item}}
+                    </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
 </div>
 </body>
 </html>

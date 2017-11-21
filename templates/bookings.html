@@ -1,53 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-       <meta http-equiv="Content-type" content="text/html;charset=utf-8" />
-        <title>International Heights Hotel</title>
-    </head>
+<head>
+    <meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+    <title>International Heights Hotel</title>
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
 <body>
-    <h1>Bookings</h1>
+<h1>Bookings</h1>
 
-    <a href ="/">Home</a>
-    <a href ="attractions">Local Attractions</a>
-    <a href ="reviews">Reviews</a>
+<nav>
+    <ul>
+        <li><a href="/">Home</a> </li>
+        <li><a href ="attractions">Local Attractions</a></li>
+        <li><a class="active" href ="bookings">Bookings</a></li>
+        <li><a href ="reviews">Reviews</a></li>
+    </ul>
+</nav>
 
-    <form action ="addBooking" method="post">
-        Name:<br>
-        <input type="text" name="bookingName">
-        <br>
-        Email:<br>
-        <input type="text" name="email">
-        <br>
-        Arrival Date:<br>
-        <input type="date" name="arrivalDate" placeholder="dd-mm-yyy">
-        <br>
-        Departure Date:<br>
-        <input type="date" name="departureDate" placeholder="dd-mm-yyy">
-        <br>
-        <input type="submit" value="Submit">
-    </form>
+<form action ="addBooking" method="post">
+    Name:<br>
+    <input type="text" name="bookingName">
+    <br>
+    Email:<br>
+    <input type="text" name="email">
+    <br>
+    Arrival Date:<br>
+    <input type="date" name="arrivalDate" placeholder="dd-mm-yyy">
+    <br>
+    Departure Date:<br>
+    <input type="date" name="departureDate" placeholder="dd-mm-yyy">
+    <br>
+    <input type="submit" value="Submit">
+</form>
 
-    <form action = "exitForm" method = "get">
-        <input type = "submit" value = "Exit" >
-    </form>
+<form action = "exitForm" method = "get">
+    <input type = "submit" value = "Exit" >
+</form>
 
-    <h3>Confirmed Bookings</h3>
+<h3>Confirmed Bookings</h3>
 
-    <table border="1">
-        <tr>
-            <th>Arrival Date</th>
-            <th>Departure Date</th>
-        </tr>
-    {% for line in bookingList %}
+<table border="1">
     <tr>
-        {% for item in line [:2] %}
-        <td>
-        {{item}}
-        </td>
-        {% endfor %}
+        <th>Arrival Date</th>
+        <th>Departure Date</th>
     </tr>
+    {% for line in bookingList %}
+        <tr>
+            {% for item in line [:2] %}
+                <td>
+                    {{item}}
+                </td>
+            {% endfor %}
+        </tr>
     {% endfor %}
-    </table>
+</table>
 
 </body>
 </html>

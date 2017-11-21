@@ -24,7 +24,7 @@ input[type=submit]:hover {
 }
 
 #nameField {
-    width: 50%;
+    width: 75%;
     padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -44,16 +44,47 @@ input[type=submit]:hover {
 }
 
 .reviewForm {
-    width: 500px;
-    border: 15px solid gray;
-    padding: 5px;
-    background-color: #AFAEB0;
-    margin: 25px;
- 
+    width: 25%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color: #c9302c;
 }
 
 .guestReviews {
-    
+
 }
 
 table {
@@ -70,7 +101,7 @@ th {
 
 
 #reviewTable {
-   right: 50px;
+    right: 50px;
 }
 
 
