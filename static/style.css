@@ -43,9 +43,22 @@ input[type=submit]:hover {
     resize: none;
 }
 
+body {
+    background-color: solid gray;
+}
+
 .reviewForm {
     width: 300px;
     border: 15px solid gray;
     padding: 5px;
     margin: 25px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    width: 30%;
+    border: 1px solid black;
 }
