@@ -14,7 +14,11 @@ def home():
 def attractions():
     return render_template('attractions.html')
 
+@app.route('/confirmButton', methods=['GET'])
+def confirmButton():
+    return render_template('bookings.html')
 
+    
 @app.route('/bookings')
 def bookings():
     with open('static\\bookings.csv', 'r') as inFile:
