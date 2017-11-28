@@ -124,3 +124,26 @@ th {
 #reviewTable {
     right: 50px;
 }
+
+.imgGallery {
+    border: 1px solid #f2f2f2;
+}
+
+.imgGallery:hover {
+    border: 1px solid #777;
+}
+
+.imgGallery img {
+    width: 100%;
+    height: auto;
+}
+
+.imgDesc {
+    padding: 15px;
+    text-align: center;
+}
+
+.textCenter {
+    text-align: center;
+}
+
