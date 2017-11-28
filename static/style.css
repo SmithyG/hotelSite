@@ -1,5 +1,10 @@
 body {
     font-family: Lucida Sans Unicode, Arial, sans-serif;
+    background-color: #e6e6e6;
+}
+
+h1 {
+   text-align: center;
 }
 
 input[type=text], select {
@@ -46,6 +51,8 @@ input[type=submit]:hover {
     background-color: #f8f8f8;
     resize: none;
 }
+
+
 
 .form {
     width: 25%;
