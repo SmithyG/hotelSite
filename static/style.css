@@ -102,7 +102,16 @@ table {
     border-collapse: collapse;
     width: 30%;
     border: 1px solid black;
+}
 
+#BookingTable {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 30%;
+    position: fixed;
+    left: 400px;
 }
 
 th {
