@@ -1,3 +1,7 @@
+body {
+    font-family: Lucida Sans Unicode, Arial, sans-serif;
+}
+
 input[type=text], select {
     width: 100%;
     padding: 12px 20px;
@@ -43,13 +47,25 @@ input[type=submit]:hover {
     resize: none;
 }
 
-.reviewForm {
+.form {
     width: 25%;
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 10px;
     margin-top: 20px;
     margin-left: 20px;
+    float: left;
+}
+
+#reviewTable td, #reviewTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#reviewTable th {
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
 }
 
 ul {
@@ -71,7 +87,6 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 li a:hover:not(.active) {
@@ -81,10 +96,6 @@ li a:hover:not(.active) {
 li a.active {
     color: white;
     background-color: #c9302c;
-}
-
-.guestReviews {
-
 }
 
 table {
@@ -99,9 +110,6 @@ th {
     width: 40px;
 }
 
-
 #reviewTable {
     right: 50px;
 }
-
-

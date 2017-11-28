@@ -3,8 +3,6 @@
 <head>
     <meta http-equiv="Content-type" content="text/html;charset=utf-8" />
     <title>International Heights Hotel</title>
-    <link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="/static/style.css">
 </head>
 <body>
@@ -19,25 +17,28 @@
     </ul>
 </nav>
 
-<form action ="addBooking" method="post">
-    Name:<br>
-    <input type="text" name="bookingName">
-    <br>
-    Email:<br>
-    <input type="text" name="email">
-    <br>
-    Arrival Date:<br>
-    <input type="date" name="arrivalDate" placeholder="dd-mm-yyy">
-    <br>
-    Departure Date:<br>
-    <input type="date" name="departureDate" placeholder="dd-mm-yyy">
-    <br>
-    <input type="submit" value="Submit">
-</form>
+<div class="form">
+    <form action ="addBooking" method="post">
+        Name:<br>
+        <input type="text" name="bookingName">
+        <br>
+        Email:<br>
+        <input type="text" name="email">
+        <br>
+        Arrival Date:<br>
+        <input type="date" name="arrivalDate" placeholder="dd-mm-yyy">
+        <br>
+        Departure Date:<br>
+        <input type="date" name="departureDate" placeholder="dd-mm-yyy">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
 
-<form action = "exitForm" method = "get">
-    <input type = "submit" value = "Exit" >
-</form>
+    <form action = "exitForm" method = "get">
+        <input type = "submit" value = "Exit" >
+    </form>
+
+</div>
 
 <h3>Confirmed Bookings</h3>
 

@@ -23,7 +23,7 @@ def confirmButton():
 def bookings():
     with open('static\\bookings.csv', 'r') as inFile:
         reader = csv.reader(inFile)
-        bookingList = [row for row in reader if 'George' in row]
+        bookingList = [row for row in reader if '1' in row]
     return render_template('bookings.html', bookingList=bookingList)
 
 
