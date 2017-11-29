@@ -39,24 +39,25 @@
     </form>
 
 </div>
-<div id = "BookingTable">
-<h3>Confirmed Bookings</h3>
 
-<table border="1">
-    <tr>
-        <th>Arrival Date</th>
-        <th>Departure Date</th>
-    </tr>
-    {% for line in bookingList %}
+<div id = "BookingTable">
+    <h3>Confirmed Bookings</h3>
+
+    <table border="1">
         <tr>
-            {% for item in line [:2] %}
-                <td>
-                    {{item}}
-                </td>
-            {% endfor %}
+            <th>Arrival Date</th>
+            <th>Departure Date</th>
         </tr>
-    {% endfor %}
-</table>
+        {% for line in bookingList %}
+            <tr>
+                {% for item in line [:2] %}
+                    <td>
+                        {{item}}
+                    </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
 </div>
 </body>
 </html>

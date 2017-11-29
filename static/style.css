@@ -1,6 +1,5 @@
 body {
     font-family: Lucida Sans Unicode, Arial, sans-serif;
-    background-color: #e6e6e6;
 }
 
 h1 {
@@ -51,8 +50,6 @@ input[type=submit]:hover {
     background-color: #f8f8f8;
     resize: none;
 }
-
-
 
 .form {
     width: 25%;
@@ -162,5 +159,15 @@ th {
 
 .textCenter {
     text-align: center;
+}
+
+#map {
+    width: 50%;
+    height: 475px;
+}
+
+.hotelInfo {
+    float: left;
+    width: 50%;
 }
 
