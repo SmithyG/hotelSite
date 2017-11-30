@@ -32,16 +32,16 @@
 
 <script>
     function myMap() {
-  var mapCanvas = document.getElementById("map");
-  var myCenter = new google.maps.LatLng(28.486230, -81.462494);
-  var mapOptions = {center: myCenter, zoom: 11};
-  var map = new google.maps.Map(mapCanvas,mapOptions);
-  var marker = new google.maps.Marker({
-    position: myCenter,
-    animation: google.maps.Animation.BOUNCE
-  });
-  marker.setMap(map);
-}
+        var mapCanvas = document.getElementById("map");
+        var myCenter = new google.maps.LatLng(28.486230, -81.462494);
+        var mapOptions = {center: myCenter, zoom: 11};
+        var map = new google.maps.Map(mapCanvas,mapOptions);
+        var marker = new google.maps.Marker({
+            position: myCenter,
+            animation: google.maps.Animation.BOUNCE
+        });
+        marker.setMap(map);
+    }
 </script>
 
 <div class="imgGallery">

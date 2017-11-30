@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-   text-align: center;
+    text-align: center;
 }
 
 input[type=text], select {
@@ -18,7 +18,7 @@ input[type=text], select {
 
 input[type=submit] {
     width: 25%;
-    background-color: #4CAF50;
+    background-color: #c9302c;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -28,7 +28,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #c9302c;
 }
 
 #nameField {
@@ -61,15 +61,19 @@ input[type=submit]:hover {
     float: left;
 }
 
-#reviewTable td, #reviewTable th {
+.formatTable td, th {
     border: 1px solid #ddd;
-    padding: 8px;
 }
 
-#reviewTable th {
+.formatTable th {
+    font-weight: normal;
     text-align: center;
-    background-color: #4CAF50;
+    background-color: #c9302c;
     color: white;
+}
+
+.formatTable {
+    width: inherit;
 }
 
 ul {
@@ -108,35 +112,13 @@ table {
     border: 1px solid black;
 }
 
-#BookingTable {
+.tableDiv {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 10px;
     margin: 20px;
     float: left;
     left: 400px;
-}
-
-.guestReviews {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    float: left;
-    left: 400px;
-}   
-
-th {
-    height: 50px;
-    width: 40px;
-}
-
-#reviewTable {
-    right: 50px;
-    width: 50%;
 }
 
 .imgGallery {
