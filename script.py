@@ -63,7 +63,7 @@ def addReview():
 
     name = request.form[('name')]
     comment = request.form[('comment')]
-    date = datetime.now().strftime('%d-%m-%Y')
+    date = datetime.now().strftime('%d/%m/%Y')
 
     newReview = [name, comment, date]
     reviewList.append(newReview)

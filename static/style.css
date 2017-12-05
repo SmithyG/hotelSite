@@ -1,5 +1,6 @@
 body {
     font-family: Lucida Sans Unicode, Arial, sans-serif;
+	background-color: #e6e6e6;
 }
 
 h1 {
@@ -157,4 +158,24 @@ table {
     float: left;
     width: 50%;
 }
+
+.attraction {
+	background-color:  #f2f2f2;
+	width: 70%;
+	padding: 2px;
+	height: 30%;
+	margin: 3px;
+	float: right
+}
+
+.localAttractionImage {
+	background-color:  #f2f2f2;
+	left: 0px;
+}
+
+.attractionText {
+	background-color:  #f2f2f2;
+	position: right;
+}
+
 
