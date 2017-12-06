@@ -127,17 +127,19 @@ table {
     left: 400px;
 }
 
+.galleryContainer{
+padding: 10px 40px;
+}
+
 .imgGallery {
-    border: 1px solid #f2f2f2;
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 400px;
 }
 
 .imgGallery:hover {
     border: 1px solid #777;
-}
-
-.imgGallery img {
-    width: 100%;
-    height: auto;
 }
 
 .imgDesc {

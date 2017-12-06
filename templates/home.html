@@ -4,7 +4,8 @@
     <meta http-equiv="Content-type" content="text/html;charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>International Heights Hotel</title>
-    <link rel="stylesheet" type="text/css" href ="/static/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script src="/static/jscript.js"></script>
 </head>
 <body>
 
@@ -12,53 +13,58 @@
 
 <nav>
     <ul>
-        <li><a class="active" href="">Home</a> </li>
-        <li><a href ="attractions">Local Attractions</a></li>
-        <li><a href ="bookings">Bookings</a></li>
-        <li><a href ="reviews">Reviews</a></li>
+        <li><a class="active" href="">Home</a></li>
+        <li><a href="attractions">Local Attractions</a></li>
+        <li><a href="bookings">Bookings</a></li>
+        <li><a href="reviews">Reviews</a></li>
     </ul>
 </nav>
 
 <h2 class="textCenter">Welcome!</h2>
 
+<!-- Image Gallery -->
+<div class="galleryContainer">
+    <div class="imgGallery">
+        <img src="/static/hc1.jpeg" alt="Door Opening" width="400" height="200">
+        <div class="imgDesc">Our Doors Are Wide Open For You!</div>
+    </div>
+
+    <div class="imgGallery">
+        <img src="/static/hc2.jpg" alt="Hotel Bar" width="400" height="200">
+        <div class="imgDesc">Drink Up!</div>
+    </div>
+
+    <div class="imgGallery">
+        <img src="/static/hc3.jpeg" alt="Rooms Outside" width="400" height="200">
+        <div class="imgDesc">A Massive Choice Of Rooms!</div>
+    </div>
+</div>
+
+<!-- Information about the hotel -->
 <div class="hotelInfo">
-    <p>International Heights Hotel is a luxury hotel located in Orlando. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis et ipsum ut ullamcorper. Proin scelerisque elit consequat, placerat justo quis, euismod nisi. Proin faucibus risus cursus lorem vulputate faucibus. Etiam nec magna in ipsum porttitor lobortis. Fusce iaculis non massa sit amet eleifend. Sed congue diam vitae dignissim pharetra. Donec pellentesque, metus sed iaculis volutpat, nisi mi imperdiet massa, ac pulvinar arcu felis nec nisl. Duis arcu urna, interdum eget consectetur a, posuere sit amet augue. Praesent luctus placerat quam quis eleifend. Aliquam tristique, lorem eu porttitor facilisis, urna magna rutrum ante, a tempor odio lorem nec nisi. Nullam sed ligula faucibus, pulvinar sem at, vestibulum sapien. Vestibulum rutrum nulla leo, sit amet finibus felis placerat et. Proin at justo quis purus condimentum ornare. Maecenas sollicitudin erat quam. Donec non aliquet arcu, ac laoreet orci.
-        Cras lacinia metus ac turpis gravida tempor. Suspendisse orci nulla, vulputate ut mauris et, egestas tincidunt velit. Cras eget elementum lacus, et molestie turpis. Ut nisl dolor, faucibus sit amet libero ac, efficitur accumsan urna. Quisque faucibus quis turpis vitae consectetur. Cras blandit efficitur arcu ac condimentum. Aenean tempor nunc vel nunc mollis, vitae finibus tortor tristique. Integer non auctor ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam et orci sit amet ipsum ullamcorper interdum. Sed eget hendrerit nulla, at congue arcu. Proin scelerisque justo vel quam dictum, vel aliquet mi ornare.</p>
+    <p>International Heights Hotel is a luxury hotel located in Orlando. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Aliquam sagittis et ipsum ut ullamcorper. Proin scelerisque elit consequat, placerat justo
+        quis, euismod nisi. Proin faucibus risus cursus lorem vulputate faucibus. Etiam nec magna in ipsum porttitor
+        lobortis. Fusce iaculis non massa sit amet eleifend. Sed congue diam vitae dignissim pharetra. Donec
+        pellentesque, metus sed iaculis volutpat, nisi mi imperdiet massa, ac pulvinar arcu felis nec nisl. Duis arcu
+        urna, interdum eget consectetur a, posuere sit amet augue. Praesent luctus placerat quam quis eleifend. Aliquam
+        tristique, lorem eu porttitor facilisis, urna magna rutrum ante, a tempor odio lorem nec nisi. Nullam sed ligula
+        faucibus, pulvinar sem at, vestibulum sapien. Vestibulum rutrum nulla leo, sit amet finibus felis placerat et.
+        Proin at justo quis purus condimentum ornare. Maecenas sollicitudin erat quam. Donec non aliquet arcu, ac
+        laoreet orci.
+        Cras lacinia metus ac turpis gravida tempor. Suspendisse orci nulla, vulputate ut mauris et, egestas tincidunt
+        velit. Cras eget elementum lacus, et molestie turpis. Ut nisl dolor, faucibus sit amet libero ac, efficitur
+        accumsan urna. Quisque faucibus quis turpis vitae consectetur. Cras blandit efficitur arcu ac condimentum.
+        Aenean tempor nunc vel nunc mollis, vitae finibus tortor tristique. Integer non auctor ex. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Nullam et orci sit amet ipsum ullamcorper interdum. Sed eget hendrerit
+        nulla, at congue arcu. Proin scelerisque justo vel quam dictum, vel aliquet mi ornare.</p>
 </div>
 
+<!-- Google Map container -->
 <div id="map">
-
 </div>
 
-<script>
-    function myMap() {
-        var mapCanvas = document.getElementById("map");
-        var myCenter = new google.maps.LatLng(28.486230, -81.462494);
-        var mapOptions = {center: myCenter, zoom: 11};
-        var map = new google.maps.Map(mapCanvas,mapOptions);
-        var marker = new google.maps.Marker({
-            position: myCenter,
-            animation: google.maps.Animation.BOUNCE
-        });
-        marker.setMap(map);
-    }
-</script>
-
-<div class="imgGallery">
-    <img src="/static/hc1.jpeg" alt="Door Opening" width="300" height="200">
-    <div class="imgDesc">Our Doors Are Wide Open For You!</div>
-</div>
-
-<div class="imgGallery">
-    <img src="/static/hc2.jpg" alt="Hotel Bar" width="300" height="200">
-    <div class="imgDesc">Drink Up!</div>
-</div>
-
-<div class="imgGallery">
-    <img src="/static/hc3.jpeg" alt="Rooms Outside" width="300" height="200">
-    <div class="imgDesc">A Massive Choice Of Rooms!</div>
-</div>
-
+<!-- API key for embedded Google Map -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW0t2Co8gZbN5d_kzdxBbzK-eC0nar3ks&callback=myMap"></script>
 </body>
 </html>

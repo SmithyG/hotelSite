@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-type" content="text/html;charset=utf-8"/>
     <title>International Heights Hotel</title>
     <link rel="stylesheet" type="text/css" href="/static/style.css">
 </head>
@@ -11,17 +11,20 @@
 
 <nav>
     <ul>
-        <li><a href="/">Home</a> </li>
-        <li><a href ="attractions">Local Attractions</a></li>
-        <li><a href ="bookings">Bookings</a></li>
-        <li><a class="active" href ="reviews">Reviews</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="attractions">Local Attractions</a></li>
+        <li><a href="bookings">Bookings</a></li>
+        <li><a class="active" href="reviews">Reviews</a></li>
     </ul>
 </nav>
 
+<!-- Form for leaving a review -->
 <div class="form">
     <h2>Leave A Review!</h2>
-    <p>We hope you had a nice stay at International Heights Hotel! Please leave any comments about the quality of your stay below!</p>
-    <form action ="addReview" method="post">
+    <p>We hope you had a nice stay at International Heights Hotel! Please leave any comments about the quality of your
+        stay below!</p>
+    <!-- Flask addReview function is used here -->
+    <form action="addReview" method="post">
         Name:<br>
         <input id="nameField" type="text" name="name">
         <br>
@@ -31,25 +34,27 @@
         <input type="submit" value="Post">
     </form>
 
-    <form action = "exitForm" method = "get">
-        <input type = "submit" value = "Exit">
+    <!-- Flask exitForm function is used here -->
+    <form action="exitForm" method="get">
+        <input type="submit" value="Exit">
     </form>
 </div>
 
-<div class = "tableDiv">
+<div class="tableDiv">
     <h2 class="textCenter">Guest Reviews</h2>
 
-    <table class="formatTable" id="reviewTable" border="1">
+    <table class="formatTable" id="reviewTable">
         <tr>
             <th>Name</th>
             <th>Comment</th>
             <th>Date</th>
         </tr>
+        <!-- Table is populated using Flask to read from reviews.css -->
         {% for line in reviewList %}
             <tr>
-                {% for item in line%}
+                {% for item in line %}
                     <td>
-                        {{item}}
+                        {{ item }}
                     </td>
                 {% endfor %}
             </tr>
