@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta http-equiv="Content-type" content="text/html;charset=utf-8"/>
     <title>International Heights Hotel</title>
     <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script src="/static/jscript.js"></script>
 </head>
 <body>
 
@@ -23,8 +24,8 @@
     <h2>Leave A Review!</h2>
     <p>We hope you had a nice stay at International Heights Hotel! Please leave any comments about the quality of your
         stay below!</p>
-    <!-- Flask addReview function is used here -->
-    <form action="addReview" method="post">
+    <!-- Flask addReview function is used here to control the writing of new reviews -->
+    <form name="reviewForm" action="addReview" method="post" onsubmit="return validateReviewForm()">
         Name:<br>
         <input id="nameField" type="text" name="name">
         <br>

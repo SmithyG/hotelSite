@@ -92,7 +92,14 @@ def addBooking():
     bookingName = request.form[('bookingName')]
     email = request.form[('email')]
     arrivalDate = request.form[('arrivalDate')]
+    #Here, the arrivalDate is converted into a datetime object
+    arrivalDate = datetime.strptime(arrivalDate, '%Y-%m-%d')
+    #The created datetime object is then turned back into a string with the correct calendar format
+    arrivalDate = arrivalDate.strftime("%d/%m/%Y")
+    #The same conversion process is also done on the departure date
     departureDate = request.form[('departureDate')]
+    departureDate = datetime.strptime(departureDate, '%Y-%m-%d')
+    departureDate = departureDate.strftime("%d/%m/%Y")
     #The status is set to 0 by default, meaning the booking is unconfirmed
     status = 0
 
